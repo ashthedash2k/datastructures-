@@ -26,6 +26,15 @@ class LinkedList:
                 current = current.next
         print("None")
 
+    def __len__(self):
+        count = 0
+        if self.head:
+            current = self.head
+            while current is not None:
+                count += 1
+                current = current.next
+        return count
+
 
 ll = LinkedList()
 ll.printLL()
@@ -34,3 +43,4 @@ ll.append(2)
 ll.append(5)
 ll.append(90)
 ll.printLL()
+print(len(ll))
